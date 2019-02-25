@@ -30,6 +30,7 @@ Once it's running, simply open: http://localhost:8888 in your browser. To shut d
 - You can change the port by using `-p xxxx:8888` with `xxxx` being what ever port you like (as long as it's free). For example you could run `docker run -p 80:8888 pascalwacker/ethz-intro-to-ml-docker:latest` and access it on just http://localhost
 - The notebook is quite heavy, as it includes the full datascience notebook as well as the tensorflow stuff. If you feel like, try to strip things away and see if every thing still works!
 - The Container uses Python 3.6, which unfortunately brakes some minor things. If you load notebooks from the course website, you'll need to modify lines looking like this: `% matplotlib inline` to `%matplotlib inline` (remove the whitespace after the `%` character)
+- Authentication has been deactivated, you won't need a login or token. DO NOT RUN THIS ON A SERVER, FACING THE PUBLIC INTERNET, AS EVERY ONE WILL HAVE FULL ACCESS TO JUPITER (running on your local machine should be perfectly fine!)
 
 ## Disclaimer:
 This software is provided as is. The are not responsible for any damages on your system or legal actions brought forward against you.
