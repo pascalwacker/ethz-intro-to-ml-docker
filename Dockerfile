@@ -2,16 +2,12 @@ FROM jupyter/datascience-notebook
 
 USER root
 RUN conda install --quiet --yes \
-    'tensorflow=1.12*' \
-    'keras=2.2*' && \
-    conda clean -tipsy && \
-    fix-permissions $CONDA_DIR && \
-fix-permissions /home/$NB_USER
-RUN conda install --quiet --yes \
+    'tensorflow=1.13*' \
+    'keras=2.2*' \
     'pandas' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
-fix-permissions /home/$NB_USER
+    fix-permissions /home/$NB_USER
 
 RUN mv /home/jovyan/work /home/jovyan/IntroToML
 
