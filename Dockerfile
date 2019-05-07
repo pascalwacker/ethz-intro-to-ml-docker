@@ -1,10 +1,13 @@
-FROM jupyter/datascience-notebook
+FROM jupyter/datascience-notebook:latest
 
 USER root
 RUN conda install --quiet --yes \
     'tensorflow=1.13*' \
     'keras=2.2*' \
     'pandas' && \
+    pip install tables && \
+    pip install ludwig && \
+    python -m spacy download en && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
