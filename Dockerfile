@@ -7,6 +7,7 @@ RUN conda install --quiet --yes \
     'pandas' && \
     pip install tables && \
     pip install ludwig && \
+    pip install talos && \
     python -m spacy download en && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
